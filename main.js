@@ -3,8 +3,7 @@
 document.getElementById("firstProduct-btn").addEventListener("click",function(){
   const firstProductName = getProductDetail("firstProduct-name");
   const firstProductPrice = getProductDetail("firstProduct-price");
-  
-  
+   
   setProductName("K. Accessories");
   productPrice(firstProductPrice)
 });
@@ -43,8 +42,18 @@ function setProductName(names){
 
 //price
 function productPrice(productPrice){
+  const btnPurchase = document.getElementById("btn-purchase");
   const priceOfProduct = document.getElementById("price")
   const price = parseFloat(priceOfProduct.textContent);
   const product = parseFloat(productPrice)
-  priceOfProduct.textContent = price + product;
+  priceOfProduct.textContent = (price + product).toFixed(3);
+  let total = priceOfProduct.textContent;
+
+  if(total > 0){
+    btnPurchase.classList.remove(
+      "opacity-50",
+      "disabled",
+      "cursor-not-allowed"
+    );
+  }
 }
