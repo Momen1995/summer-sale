@@ -29,92 +29,39 @@
   </header>
 
   <!-- main -->
-  <main class="w-10/12 mx-auto mt-12">
-  <div class="flex gap-8">
-    <!-- left menu -->
-  <div class="w-8/12">
-    <div>
-    <h3 class="text-2xl font-semibold">Kitchenware</h3>
-      <div class="flex justify-between  text-center mt-6">
-        <div>
-          <img src="./images/prod1.png">
-          <h5 class="font-medium">K. Accessories</h5>
-          <p>39.00 TK</p>
-        </div>
-        <div>
-          <img src="./images/prod2.png">
-          <h5 class="font-medium">K. Accessories</h5>
-          <p>39.00 TK</p>
-        </div>
-        <div>
-          <img src="./images/prod3.png">
-          <h5 class="font-medium">K. Accessories</h5>
-          <p>39.00 TK</p>
-        </div>
-      </div>
-  </div>
-
-  <div>
-    <h3 class="text-2xl font-semibold">Kitchenware</h3>
-      <div class="flex justify-between  text-center mt-6">
-        <div>
-          <img src="./images/prod4.png">
-          <h5 class="font-medium">K. Accessories</h5>
-          <p>39.00 TK</p>
-        </div>
-        <div>
-          <img src="./images/prod5.png">
-          <h5 class="font-medium">K. Accessories</h5>
-          <p>39.00 TK</p>
-        </div>
-        <div>
-          <img src="./images/prod6.png">
-          <h5 class="font-medium">K. Accessories</h5>
-          <p>39.00 TK</p>
-        </div>
-      </div>
-  </div>
-
-  <div>
-    <h3 class="text-2xl font-semibold">Kitchenware</h3>
-      <div class="flex justify-between  text-center mt-6">
-        <div>
-          <img src="./images/prod7.png">
-          <h5 class="font-medium">K. Accessories</h5>
-          <p>39.00 TK</p>
-        </div>
-        <div>
-          <img src="./images/prod8.png">
-          <h5 class="font-medium">K. Accessories</h5>
-          <p>39.00 TK</p>
-        </div>
-        <div>
-          <img src="./images/prod9.png">
-          <h5 class="font-medium">K. Accessories</h5>
-          <p>39.00 TK</p>
-        </div>
-      </div>
-  </div>
-  </div>
-
-    <!-- right menu -->
-    <div class="bg-white">
+  <main class="w-10/12 mx-auto mt-12 flex gap-6">
+    <section class="w-9/12">
       <div>
-        <h3>Have coupon?</h3>
-        <div class="relative">
-          <input type="text" placeholder="Coupon code" class="border px-4 py-2 w-full">
-          <button class="bg-[#e527b2] px-4 py-2 text-[#fff] font-semibold rounded text-xl absolute right-0">Apply</button>
+        <h2 class="mb-10 text-2xl font-semibold">Kitchenware</h2>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="bg-white p-2 shadow-lg" id="firstProduct-btn">
+          <img src="./images/prod1.png" alt="" class="w-100 mx-auto">
+          <h3 class="font-semibold text-xl my-2" id="firstProduct-name">K. Accessories</h3>
+          <p class="text-slate-500"><span id="firstProduct-price">70.00</span>TK</p>
+          </div>
+          <div class="bg-white p-6 shadow-lg" id="secondProduct-btn">
+          <img src="./images/prod2.png" alt=""  class="w-100 mx-auto">
+          <h3 class="font-semibold text-xl my-2">Accessories</h3>
+          <p class="text-slate-500"><span>70.00</span>TK</p>
+          </div>
+          <div class="bg-white p-6 shadow-lg" id="thirdProduct-btn">
+          <img src="./images/prod3.png" alt=""  class="w-100 mx-auto">
+          <h3 class="font-semibold text-xl my-2">Home Cooker</h3>
+          <p class="text-slate-500"><span>70.00</span>TK</p> 
+          </div>
         </div>
-        <div class="mt-6">
-          <p>Total Price:</p>
-          <p>Discount:</p>
-          <p>Total:</p>
-        </div>
-        <button class="bg-[#e527b2] px-4 py-2 text-[#fff] font-semibold rounded text-xl w-10/12 mt-6 mx-auto"> Purchase</button>
       </div>
-    </div>
-    </div>
-  </div>
+    </section>
+
+    <!-- right-side -->
+     <section class="w-3/12 bg-slate-300 space-y-2 p-3">
+      <h3 class="text-2xl font-bold text-center">Have coupon?</h3>
+      <input type="text" name="" id="" class="p-2 bg-white rounded">
+      <ul id="products-name" class="list-decimal ps-4 font-semibold"></ul>
+      <p>Total price:</p>
+      <p>Discount:</p>
+      <p>Total:</p>
+     </section>
   </main>
 </body>
 </html>
