@@ -4,7 +4,25 @@ document.getElementById("firstProduct-btn").addEventListener("click",function(){
   const firstProductName = getProductDetail("firstProduct-name");
   const firstProductPrice = getProductDetail("firstProduct-price");
   
+  
   setProductName("K. Accessories");
+  productPrice(firstProductPrice)
+});
+
+document.getElementById("secondProduct-btn").addEventListener("click",function(){
+  const secondProductName = getProductDetail("secondProduct-name");
+  const secondProductPrice = getProductDetail("secondProduct-price");
+  
+  setProductName("Accessories");
+  productPrice(secondProductPrice)
+});
+
+document.getElementById("thirdProduct-btn").addEventListener("click",function(){
+  const thirdProductName = getProductDetail("thirdProduct-name");
+  const thirdProductPrice = getProductDetail("thirdProduct-price");
+
+  setProductName("Home Cooker");
+  productPrice(thirdProductPrice);
 });
 
 
@@ -21,4 +39,12 @@ function setProductName(names){
   const li = document.createElement("li");
   li.textContent = names;
   productsName.append(li);
+}
+
+//price
+function productPrice(productPrice){
+  const priceOfProduct = document.getElementById("price")
+  const price = parseFloat(priceOfProduct.textContent);
+  const product = parseFloat(productPrice)
+  priceOfProduct.textContent = price + product;
 }
