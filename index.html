@@ -15,7 +15,7 @@
       <!-- right header -->
     <div class="w-1/2">
       <h3 class="text-[#111] text-center text-2xl font-medium mb-3">---SALE FEVER---</h3>
-      <h1 class="text-[#111] text-center text-5xl font-bold">Purchase TK 200 or above & get <span class="text-[#E527B2] ">20% off</span></h1>
+      <h1 class="text-[#111] text-center text-5xl font-bold">Purchase TK 250 or above & get <span class="text-[#E527B2] ">20% off</span></h1>
       <div class="flex gap-3 items-center justify-center  mt-6">
         <p class="font-medium text-xl">Use Promo Code</p>
         <button class="bg-[#e527b2] px-4 py-2 text-[#fff] font-semibold rounded text-xl">SELL200</button>
@@ -56,11 +56,14 @@
     <!-- right-side -->
      <section class="w-3/12 bg-slate-300 space-y-2 p-3">
       <h3 class="text-2xl font-bold text-center">Have coupon?</h3>
-      <input type="text" name="" id="" class="p-2 bg-white rounded">
+      <div class="relative my-3">
+        <input type="text" name="" id="discount-input" class="p-2 bg-white rounded">
+        <button class="bg-[#E527B2] px-4 py-2 rounded  text-white font-semibold opacity-50 cursor-not-allowed absolute right-10" disabled  id="btn-apply">Apply</button>
+      </div>
       <ul id="products-name" class="list-decimal ps-8 font-semibold"></ul>
       <p>Total price: <span id="price">00.00</span></p>
-      <p>Discount:</p>
-      <p>Total:</p>
+      <p>Discount:<span id="discount-rate">00.00</span></p>
+      <p>Total: <span id="total-value">00.00</span></p>
       <button class="bg-[#E527B2] px-4 py-2 rounded w-full text-white font-semibold opacity-50 cursor-not-allowed" disabled id="btn-purchase">Make purchase</button>
      </section>
   </main>

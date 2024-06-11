@@ -43,7 +43,8 @@ function setProductName(names){
 //price
 function productPrice(productPrice){
   const btnPurchase = document.getElementById("btn-purchase");
-  const priceOfProduct = document.getElementById("price")
+  const priceOfProduct = document.getElementById("price");
+  const applyBtn = document.getElementById("btn-apply");
   const price = parseFloat(priceOfProduct.textContent);
   const product = parseFloat(productPrice)
   priceOfProduct.textContent = (price + product).toFixed(3);
@@ -55,5 +56,29 @@ function productPrice(productPrice){
       "disabled",
       "cursor-not-allowed"
     );
+    btnPurchase.removeAttribute("disabled");
   }
+
+  if(total >= 250){
+   applyBtn.classList.remove(
+      "opacity-50",
+      "disabled",
+      "cursor-not-allowed"
+    ); 
+   applyBtn.removeAttribute("disabled")
+
+   applyBtn.addEventListener("click", function () {
+     const totalValue = document.getElementById("total-value");
+     const disCountRate = document.getElementById("discount-rate");
+     const discountInput = document.getElementById("discount-input");
+     const discountCode = discountInput.value;
+
+     if (discountCode === "SELL200") {
+       const discount = total * 0.2;
+       disCountRate.textContent = discount.toFixed(3);
+       totalValue.textContent = (total - disCountRate.textContent).toFixed(2);
+     }
+   });
+  }
+
 }
